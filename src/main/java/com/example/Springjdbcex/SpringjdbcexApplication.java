@@ -1,6 +1,7 @@
 package com.example.Springjdbcex;
 
 import com.example.Springjdbcex.model.Student;
+import com.example.Springjdbcex.service.StudentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,7 +17,8 @@ public class SpringjdbcexApplication {
 		s.setRollno(227);
 		s.setName("Sushanth");
 		s.setMarks(90);
-
+		StudentService service = context.getBean(StudentService.class);
+		  service.addStudent(s);
 	}
 
 }
